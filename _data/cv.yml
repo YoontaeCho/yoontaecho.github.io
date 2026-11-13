@@ -3,7 +3,7 @@
 cv:
   name: Yoontae Cho
   headline: M.S. Student, Kim Jaechul Graduate School of AI, KAIST
-  location: Daejeon, South Korea
+  location: Seoul, South Korea
   email: yoontae.cho@kaist.ac.kr
   website: https://yoontaecho.github.io
   social_networks:
@@ -18,7 +18,7 @@ cv:
         degree: M.S.
         start_date: 2024-09
         end_date: 2027-02
-        location: Daejeon, South Korea
+        location: Seoul, South Korea
         highlights:
           - "Advisor: Prof. Beomjoon Kim ([HuGe Lab](https://www.hugelab.org/)), expected graduation Feb 2027"
 
