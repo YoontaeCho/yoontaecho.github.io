@@ -31,6 +31,13 @@ Try another RenderCV theme without touching the file:
 uv run rendercv render _data/cv.yml --design.theme harvard
 ```
 
+Build an application PDF with the transcript appended (CV followed by one page per image). The images and the output stay outside this repo, in `../private/`:
+
+```bash
+uv run python tools/build_cv_packet.py
+uv run python tools/build_cv_packet.py --appendix-images a.jpg b.jpg --output ../private/packet.pdf
+```
+
 Convert raw recordings into web clips. Originals stay outside this repo (default: the parent folder), and each entry in `tools/media.yaml` becomes `assets/video/<name>.mp4` plus a poster at `assets/img/<name>.jpg`:
 
 ```bash

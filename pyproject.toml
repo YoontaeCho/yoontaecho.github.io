@@ -5,6 +5,7 @@ description = "CV rendering and media processing for yoontaecho.github.io"
 requires-python = ">=3.12"
 dependencies = [
     "icecream",
+    "pypdf",
     "pyyaml",
     "rendercv[full]",
     "tyro",

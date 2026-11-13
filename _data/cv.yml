@@ -87,8 +87,12 @@ cv:
         details: Python, C++
 
     Honors:
+      - label: Academic Excellence Award
+        details: School of Mechanical and Aerospace Engineering, KAIST, Dec 2025
       - label: Summa Cum Laude
         details: KAIST, 2024
+      - label: Outstanding Achievement Award
+        details: Dept. of Mechanical Engineering, KAIST, Spring 2020, Spring 2023
       - label: Dean's List
         details: KAIST, Spring 2020, Fall 2020, Fall 2022, Spring 2023
       - label: Guwon Scholarship Foundation
