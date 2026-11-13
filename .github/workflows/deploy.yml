@@ -87,7 +87,7 @@ jobs:
       - name: Render CV PDF 📄
         run: |
           pip3 install uv
-          uv run rendercv render _data/cv.yml
+          uv run python tools/build_cv_packet.py public
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@dffe9a5223d84653c13374032382f6bb5de8e5ef # v0.17.0
         with:

@@ -100,12 +100,16 @@ cv:
 
     Teaching:
       - label: Teaching Assistant
-        details: Calculus II, KAIST, Fall 2020
+        details: Robot Task and Motion Planning (AI614), KAIST, Spring 2025
+      - label: Teaching Assistant
+        details: Calculus II (MAS102), KAIST, Fall 2020
 
 design:
   theme: sb2nov
   page:
     size: a4
+    top_margin: 0.55in
+    bottom_margin: 0.55in
     show_footer: false
     show_top_note: false
   templates:
@@ -120,7 +124,7 @@ settings:
   render_command:
     # paths are relative to this file
     typst_path: ../.rendercv/NAME_IN_SNAKE_CASE_CV.typ
-    pdf_path: ../assets/pdf/NAME_IN_SNAKE_CASE_CV.pdf
+    pdf_path: ../.rendercv/NAME_IN_SNAKE_CASE_CV.pdf
     dont_generate_markdown: true
     dont_generate_html: true
     dont_generate_png: true
