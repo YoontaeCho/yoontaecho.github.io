@@ -1,0 +1,7 @@
+{%- comment -%} Overrides the al_folio_cv template: institution logo instead of a year badge. {%- endcomment -%}
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for entry in entries %}
+    {% capture degree_line %}{% if entry.degree %}{{ entry.degree }} in {% endif %}{{ entry.area }}{% endcapture %}
+    {% include cv/figure_entry.liquid entry=entry title=entry.institution subtitle=degree_line side=entry.location logo=true %}
+  {% endfor %}
+</ul>

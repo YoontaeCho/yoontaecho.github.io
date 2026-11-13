@@ -1,0 +1,14 @@
+[project]
+name = "yoontaecho-site-tools"
+version = "0.1.0"
+description = "CV rendering and media processing for yoontaecho.github.io"
+requires-python = ">=3.12"
+dependencies = [
+    "icecream",
+    "pyyaml",
+    "rendercv[full]",
+    "tyro",
+]
+
+[tool.uv]
+package = false

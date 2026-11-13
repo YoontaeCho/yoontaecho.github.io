@@ -1,0 +1,4 @@
+# Co-author links on the publications page. Keys are lower-cased last names without accents.
+"kim":
+  - firstname: ["Beomjoon"]
+    url: https://beomjoonkim.github.io/

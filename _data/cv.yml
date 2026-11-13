@@ -1,0 +1,122 @@
+# Single source for the CV: RenderCV renders the PDF from this file, and the /cv/ page renders the same data.
+# Keys RenderCV does not know (publisher, image, url on projects) are read only by the web page.
+cv:
+  name: Yoontae Cho
+  headline: M.S. Student, Kim Jaechul Graduate School of AI, KAIST
+  location: Daejeon, South Korea
+  email: yoontae.cho@kaist.ac.kr
+  website: https://yoontaecho.github.io
+  social_networks:
+    - network: GitHub
+      username: YoontaeCho
+
+  sections:
+    Education:
+      - institution: KAIST
+        image: assets/img/logo/kaist.png
+        area: Artificial Intelligence
+        degree: M.S.
+        start_date: 2024-09
+        end_date: 2027-02
+        location: Daejeon, South Korea
+        highlights:
+          - "Advisor: Prof. Beomjoon Kim ([HuGe Lab](https://www.hugelab.org/)), expected graduation Feb 2027"
+
+      - institution: KAIST
+        image: assets/img/logo/kaist.png
+        area: Mechanical Engineering and Computer Science (double major)
+        degree: B.S.
+        start_date: 2019-02
+        end_date: 2024-08
+        location: Daejeon, South Korea
+        highlights:
+          - "GPA: 4.16/4.3, Summa Cum Laude"
+          - Ranked 1st in the Department of Mechanical Engineering
+          - Mandatory military service, Mar 2021 – Sep 2022 (completed)
+
+      - institution: Gyeonggi Science High School for the Gifted
+        area: High School Diploma
+        start_date: 2016
+        end_date: 2018
+
+    Publications:
+      - title: "CODA: Depth-Aligned Scene Completion and Object Decomposition from a Single RGB-D Image"
+        authors:
+          - Dongwon Son
+          - Junhyek Han
+          - "**Yoontae Cho**"
+          - Minseok Lee
+          - Hong-seok Choi
+          - Jiwook Choi
+          - Hyungjin Kim
+          - Beomjoon Kim
+        journal: &coda_venue Under review, arXiv:2609.25654
+        publisher: *coda_venue
+        url: https://arxiv.org/abs/2609.25654
+        image: assets/img/publication_preview/coda.jpg
+        date: 2026
+
+      - title: "CORN: Contact-based Object Representation for Nonprehensile Manipulation of General Unseen Objects"
+        authors:
+          - Yoonyoung Cho
+          - Junhyek Han
+          - "**Yoontae Cho**"
+          - Beomjoon Kim
+        journal: &corn_venue ICLR 2024
+        publisher: *corn_venue
+        url: https://arxiv.org/abs/2403.10760
+        image: assets/img/publication_preview/corn.jpg
+        date: 2024
+
+    Projects:
+      - name: Bimanual Pick-and-Place, Industry Project with LG
+        start_date: 2025-09
+        end_date: 2026-02
+        url: /projects/bimanual_pick_and_place/
+        image: assets/img/bimanual_pallet_to_table.jpg
+        highlights:
+          - Developed a bimanual pick-and-place system, from reinforcement learning in massively parallel simulation to deployment on the real robot.
+          - Sim-to-real transfer to a dual-arm robot, moving parts between a slotted pallet and a table.
+
+    Technical Skills:
+      - label: Robots
+        details: Unitree G1, Franka FR3, Fairino FR5
+      - label: Simulators
+        details: MuJoCo, Isaac Sim (Isaac Lab), Isaac Gym, RaiSim, Genesis
+      - label: Programming
+        details: Python, C++
+
+    Honors:
+      - label: Summa Cum Laude
+        details: KAIST, 2024
+      - label: Dean's List
+        details: KAIST, Spring 2020, Fall 2020, Fall 2022, Spring 2023
+      - label: Guwon Scholarship Foundation
+        details: External scholarship, Fall 2020, Spring 2023, Fall 2023, Spring 2024
+
+    Teaching:
+      - label: Teaching Assistant
+        details: Calculus II, KAIST, Fall 2020
+
+design:
+  theme: sb2nov
+  page:
+    size: a4
+    show_footer: false
+    show_top_note: false
+  templates:
+    education_entry:
+      # the theme default (*DEGREE* *in* *AREA*) leaves a stray "in" when an entry has no degree
+      main_column: "**INSTITUTION**\n*DEGREE* in *AREA*\nSUMMARY\nHIGHLIGHTS"
+
+locale:
+  language: english
+
+settings:
+  render_command:
+    # paths are relative to this file
+    typst_path: ../.rendercv/NAME_IN_SNAKE_CASE_CV.typ
+    pdf_path: ../assets/pdf/NAME_IN_SNAKE_CASE_CV.pdf
+    dont_generate_markdown: true
+    dont_generate_html: true
+    dont_generate_png: true

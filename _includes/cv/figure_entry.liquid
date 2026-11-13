@@ -1,0 +1,50 @@
+{%- comment -%}
+  One CV row: figure on the left, text on the right.
+  Params: entry (uses entry.image, dates, highlights), title, url, subtitle,
+          side (right-aligned text on the subtitle row), logo (true for institution logos)
+{%- endcomment -%}
+<li class="list-group-item">
+  <div class="row">
+    <div class="col-sm-2 cv-figure{% if include.logo %} cv-logo{% endif %}">
+      {% if include.entry.image %}
+        <img
+          src="{{ include.entry.image | relative_url }}"
+          alt="{{ include.title | strip_html | escape }}"
+          {% unless include.logo %}
+            class="rounded z-depth-1"
+          {% endunless %}
+          loading="lazy"
+        >
+      {% endif %}
+    </div>
+    <div class="col-sm-10 mt-2 mt-md-0">
+      <div class="cv-line">
+        <h6 class="title font-weight-bold">
+          {% if include.url %}
+            <a href="{{ include.url }}">{{ include.title }}</a>
+          {% else %}
+            {{ include.title }}
+          {% endif %}
+        </h6>
+        <span class="cv-side">{% include cv/date_range.liquid entry=include.entry %}</span>
+      </div>
+      {% if include.subtitle or include.side %}
+        <div class="cv-line">
+          <h6 class="cv-subtitle">
+            <em>{{ include.subtitle }}</em>
+          </h6>
+          <span class="cv-side">{{ include.side }}</span>
+        </div>
+      {% endif %}
+      {% if include.entry.highlights %}
+        <ul class="items">
+          {% for item in include.entry.highlights %}
+            <li>
+              <span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+</li>

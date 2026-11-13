@@ -1,0 +1,8 @@
+# Badges for the `abbr` field in _bibliography/papers.bib
+"ICLR":
+  url: https://iclr.cc/Conferences/2024
+  color: "#00369f"
+
+"arXiv":
+  url: https://arxiv.org/abs/2609.25654
+  color: "#b31b1b"

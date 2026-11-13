@@ -1,0 +1,20 @@
+{%- comment -%}
+  Looping muted clip produced by tools/process_media.py.
+  `name` maps to assets/video/<name>.mp4 and its poster assets/img/<name>.jpg.
+{%- endcomment -%}
+<figure>
+  <video
+    src="{{ include.name | prepend: 'assets/video/' | append: '.mp4' | relative_url }}"
+    poster="{{ include.name | prepend: 'assets/img/' | append: '.jpg' | relative_url }}"
+    class="img-fluid rounded z-depth-1"
+    autoplay
+    loop
+    muted
+    playsinline
+    controls
+    preload="metadata"
+  ></video>
+  {% if include.caption %}
+    <figcaption class="caption">{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>

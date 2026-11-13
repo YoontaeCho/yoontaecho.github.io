@@ -1,0 +1,5 @@
+# Social links shown on the about page, in this order.
+# Supported keys: https://github.com/george-gca/jekyll-socials
+cv_pdf: /assets/pdf/Yoontae_Cho_CV.pdf
+email: yoontae.cho@kaist.ac.kr
+github_username: YoontaeCho

@@ -1,0 +1,24 @@
+{%- comment -%}
+  Dates of a RenderCV entry as text: "Sep 2024 – Feb 2027", "2016 – 2018" or "2026".
+  Uses start_date/end_date when present, otherwise the single date.
+{%- endcomment -%}
+{%- assign bounds = '' | split: ',' -%}
+{%- if include.entry.start_date -%}
+  {%- assign bounds = bounds | push: include.entry.start_date | push: include.entry.end_date -%}
+{%- elsif include.entry.date -%}
+  {%- assign bounds = bounds | push: include.entry.date -%}
+{%- endif -%}
+{%- for bound in bounds -%}
+  {%- assign raw = bound | append: '' -%}
+  {%- assign part_count = raw | split: '-' | size -%}
+  {%- if forloop.index > 1 %} – {% endif -%}
+  {%- if raw == '' -%}
+    Present
+  {%- elsif part_count == 2 -%}
+    {{- raw | append: '-01' | date: '%b %Y' -}}
+  {%- elsif part_count == 3 -%}
+    {{- raw | date: '%b %Y' -}}
+  {%- else -%}
+    {{- raw -}}
+  {%- endif -%}
+{%- endfor -%}

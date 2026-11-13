@@ -1,0 +1,6 @@
+{%- comment -%} Overrides the al_folio_cv template: paper figure instead of a year badge. {%- endcomment -%}
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for entry in entries %}
+    {% include cv/figure_entry.liquid entry=entry title=entry.title url=entry.url subtitle=entry.publisher %}
+  {% endfor %}
+</ul>

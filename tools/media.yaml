@@ -1,0 +1,19 @@
+# One entry per web clip. `src` is relative to --raw-dir.
+# Outputs: assets/video/<name>.mp4 and a poster frame at assets/img/<name>.jpg.
+# Optional per-clip keys: start, end (seconds), crop ("w:h:x:y", applied before scaling).
+clips:
+  - name: humanoid_hurdle
+    src: IMG_8343.MOV
+    poster_time: 6.0
+  - name: humanoid_ladder
+    src: IMG_8451.mov
+    poster_time: 12.0
+  - name: bimanual_sim
+    src: bimanual_finetune.webm
+    poster_time: 20.0
+  - name: bimanual_pallet_to_table
+    src: pallet_to_table.MOV
+    poster_time: 16.0
+  - name: bimanual_table_to_pallet
+    src: table_to_pallet (1).MOV
+    poster_time: 20.0
